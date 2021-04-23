@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+        nodejs:
+                container_name: blog-leandrino
+                build: .
+                volumes:
+                        - ./application:/usr/src/app/
+                ports:
+                        - 3000:3000
+                #command: sh -c "tail -f /dev/null"
+                command: sh -c "yarn install && CHOKIDAR_USEPOLLING=true yarn dev"
