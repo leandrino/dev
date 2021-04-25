@@ -1,27 +1,35 @@
 import React from "react";
 import Link from "next/link";
 import styled from 'styled-components';
-import BasicLayout from "../layout/Basic";
+import BasicLayout, { Theme } from "../layout/Basic";
+import { Logo } from "../components/logo";
+import { Container } from "../components/container";
+import { Header } from "../components/header";
 
 const Title = styled.h1`
-  color: purple;
+  color: ${({ theme }: { theme: Theme }) => theme.title};
+  font-weight: 900;
+  text-transform: uppercase;
 `
 
 function IndexPage(props: { blogs: { id: React.Key | null | undefined; slug: any; title: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }[]; }) {
   return (
     <BasicLayout>
-      <Title>Blog list</Title>
-      <ul>
-        {props.blogs.map((blog: { id: React.Key | null | undefined; slug: any; title: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }, idx: any) => {
-          return (
-            <li key={blog.id}>
-              <Link href={`/blog/${blog.slug}`}>
-                <a>{blog.title}</a>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <Container>
+        <Header />
+        <Title>Stories</Title>
+        <ul>
+          {props.blogs.map((blog: { id: React.Key | null | undefined; slug: any; title: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }, idx: any) => {
+            return (
+              <li key={blog.id}>
+                <Link href={`/blog/${blog.slug}`}>
+                  <a>{blog.title}</a>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </Container>
     </BasicLayout>
   );
 }
