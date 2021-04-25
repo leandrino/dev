@@ -61,10 +61,13 @@ export async function getStaticProps() {
       const { data } = matter(rawContent);
 
       return { ...data, id: uuid() };
-    });
+    })
+    .sort((a: any,b: any) => 0 - (a.order > b.order ? -1 : 1));
 
-    // By returning { props: blogs }, the IndexPage component
+  // By returning { props: blogs }, the IndexPage component
   // will receive `blogs` as a prop at build time
+  // desc values.sort((a,b) => 0 - (a > b ? 1 : -1));
+  
   return {
     props: { blogs },
   };
