@@ -28,11 +28,24 @@ const Title = styled.h2`
   padding: 0;
 `
 
+const Infos = styled.div`
+  width: 100%;
+`
+
+const Date = styled.span`
+  color: #FF006E;
+  font-size: 12px;
+  font-weight: 700;
+`
+
 export function Card ({ title, slug, date, language = "pt-BR" }: CardProps) {
   return (
     <Link href={`/blog/${slug}`}>
       <Wrapper>
         <Title>{title}</Title>
+        <Infos>
+          <Date>{date}</Date>
+        </Infos>
       </Wrapper>
     </Link>
   )

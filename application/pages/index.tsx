@@ -20,7 +20,7 @@ const Stories = styled.div`
   padding: 0 16px;
 `
 
-function IndexPage(props: { blogs: { id: React.Key | null | undefined; slug: any; title: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }[]; }) {
+function IndexPage(props: any) {
   return (
     <BasicLayout>
       <Container>
