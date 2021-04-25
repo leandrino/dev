@@ -5,11 +5,19 @@ import BasicLayout, { Theme } from "../layout/Basic";
 import { Logo } from "../components/logo";
 import { Container } from "../components/container";
 import { Header } from "../components/header";
+import { Card } from "../components/card";
 
 const Title = styled.h1`
   color: ${({ theme }: { theme: Theme }) => theme.title};
   font-weight: 900;
+  margin: 30px 16px;
   text-transform: uppercase;
+`
+const Stories = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 16px;
 `
 
 function IndexPage(props: { blogs: { id: React.Key | null | undefined; slug: any; title: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }[]; }) {
@@ -18,17 +26,18 @@ function IndexPage(props: { blogs: { id: React.Key | null | undefined; slug: any
       <Container>
         <Header />
         <Title>Stories</Title>
-        <ul>
-          {props.blogs.map((blog: { id: React.Key | null | undefined; slug: any; title: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }, idx: any) => {
+        <Stories>
+          {props.blogs.map((blog: any) => {
             return (
-              <li key={blog.id}>
-                <Link href={`/blog/${blog.slug}`}>
-                  <a>{blog.title}</a>
-                </Link>
-              </li>
+              <Card 
+                key={blog.id}
+                title={blog.title}
+                date={blog.date}
+                slug={blog.slug}
+              />
             );
           })}
-        </ul>
+        </Stories>
       </Container>
     </BasicLayout>
   );

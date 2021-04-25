@@ -14,8 +14,9 @@ const Wrap = styled.nav`
 `
 
 const LinkWarp = styled.div`
-  font-weight: 700;
-  
+  font-size: 18px;
+  font-weight: 900;
+
   && > a:not(:last-child) {
     margin-right: 16px;
   }
