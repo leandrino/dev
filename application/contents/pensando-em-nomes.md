@@ -2,7 +2,7 @@
 title: Pensando em nomes...
 slug: pensando-em-nomes
 date: "06-21-2017"
-order: 2
+order: 1
 ---
 
 Há pouco comecei a ler Clean Code de Robert Cecil Martin, e em suas primeiras páginas já percebo que este conhecimento fará diferença no meu código a partir deste momento.

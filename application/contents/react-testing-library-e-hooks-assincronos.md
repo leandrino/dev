@@ -2,7 +2,7 @@
 title: React Testing Library e Hooks Assincronos
 slug: react-testing-library-e-hooks-assincronos
 date: "04-23-2021"
-order: 1
+order: 2
 ---
 
 Venho trabalhando há algum tempo com React, hooks e React Testing Library e observando alguns equívocos quanto a solução de testes unitários em hooks. Na maioria das vezes, as dificuldades encontrada nestes testes estão no entendimento da nova api, o que é comum, já que temos uma mudança de pensamento, em uma biblioteca popular e livre, onde permite times performar de formas diferentes ao longo dos projetos. Certo, este artigo terá algumas (ou muitas) visões pessoais sobre projetos e aplicações React, não leve tudo como verdade absoluta, deixarei referências ao final, para conseguir pesquisar e tirar suas próprias conclusões.

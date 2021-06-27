@@ -1,11 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import styled from 'styled-components';
-import BasicLayout, { Theme } from "../layout/Basic";
-import { Logo } from "../components/logo";
-import { Container } from "../components/container";
-import { Header } from "../components/header";
-import { Card } from "../components/card";
+import BasicLayout, { Theme } from "../ui/Basic";
+import { Container } from "../components/layout/container";
+import { Header } from "../components/surfaces/header";
+import { Card } from "../components/surfaces/card";
 
 const Title = styled.h1`
   color: ${({ theme }: { theme: Theme }) => theme.title};
@@ -14,10 +12,11 @@ const Title = styled.h1`
   text-transform: uppercase;
 `
 const Stories = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
   padding: 0 16px;
+  row-gap: 20px;
 `
 
 function IndexPage(props: any) {
@@ -62,7 +61,7 @@ export async function getStaticProps() {
 
       return { ...data, id: uuid() };
     })
-    .sort((a: any,b: any) => 0 - (a.order > b.order ? -1 : 1));
+    .sort((a: any,b: any) => 0 - (a.order > b.order ? 1 : -1));
 
   // By returning { props: blogs }, the IndexPage component
   // will receive `blogs` as a prop at build time

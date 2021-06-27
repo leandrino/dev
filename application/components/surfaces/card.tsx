@@ -10,8 +10,8 @@ interface CardProps {
 }
 
 const Wrapper = styled.section`
-  width: 43.333%;
-  min-height: 105px;
+  width: 100%;
+  min-height: 135px;
   background-color: #FFFFFF;
   border-radius: 3px;
   cursor: pointer;

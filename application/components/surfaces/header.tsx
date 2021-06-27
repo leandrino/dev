@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { Theme } from "../layout/Basic";
-import { Logo } from "./logo";
+import { Theme } from "../../ui/Basic";
+import { Logo } from "../images/logo";
 
 const Wrap = styled.nav`
   background-color: ${({ theme }: { theme: Theme }) => theme.headerBackground};

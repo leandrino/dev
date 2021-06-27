@@ -1,5 +1,5 @@
 import React from "react";
-import BasicLayout from "../../layout/Basic";
+import BasicLayout from "../../ui/Basic";
 
 function BlogPostPage(props: any) {
   return (
