@@ -13,10 +13,14 @@ const Title = styled.h1`
 `
 const Stories = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   column-gap: 20px;
   padding: 0 16px;
   row-gap: 20px;
+
+  @media screen and (min-width: 500px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `
 
 function IndexPage(props: any) {

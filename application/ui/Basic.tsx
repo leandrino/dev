@@ -30,6 +30,8 @@ export const darkTheme: Theme = {
 }
 
 export const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -40,8 +42,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {

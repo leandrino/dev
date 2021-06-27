@@ -1,13 +1,8 @@
 import React from "react";
-import BasicLayout from "../../ui/Basic";
+import { BlogPost } from "../../ui/blog-post";
 
 function BlogPostPage(props: any) {
-  return (
-    <BasicLayout>
-      <h1>{props.blog.title}</h1>
-      <section dangerouslySetInnerHTML={{ __html: props.blog.content }} />
-    </BasicLayout>
-  );
+  return <BlogPost {...props} />;
 }
 
 // pass props to BlogPostPage component
@@ -49,7 +44,7 @@ export async function getStaticProps(context: { params: { slug: any; }; }) {
 export async function getStaticPaths() {
   const fs = require("fs");
 
-    const path = `${process.cwd()}/contents`;
+  const path = `${process.cwd()}/contents`;
   const files = fs.readdirSync(path, "utf-8");
 
     const markdownFileNames = files
