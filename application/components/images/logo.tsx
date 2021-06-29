@@ -2,7 +2,7 @@ import React from 'react'
 
 export function Logo() {
   return (
-    <svg width="100" height="97" viewBox="0 0 100 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="50" height="47" viewBox="0 0 100 97" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0H10.1249V22.2128H23.682V30.0753H0V0Z" fill="url(#paint0_linear)" />
       <path d="M52.0913 22.4276V30.0753H27.1222V0H51.5336V7.64772H37.0755V11.1708H49.7746V18.4748H37.0755V22.4276H52.0913Z" fill="url(#paint1_linear)" />
       <path d="M77.0969 24.8336H65.6849L63.6685 30.0753H53.372L66.5001 0H76.4534L89.5815 30.0753H79.1133L77.0969 24.8336ZM74.3083 17.5296L71.3909 9.96781L68.4736 17.5296H74.3083Z" fill="url(#paint2_linear)" />

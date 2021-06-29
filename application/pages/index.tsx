@@ -26,8 +26,8 @@ const Stories = styled.div`
 function IndexPage(props: any) {
   return (
     <BasicLayout>
+      <Header />
       <Container>
-        <Header />
         <Title>Stories</Title>
         <Stories>
           {props.blogs.map((blog: any) => {

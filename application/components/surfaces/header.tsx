@@ -4,11 +4,11 @@ import { Theme } from "../../ui/Basic";
 import { Logo } from "../images/logo";
 
 const Wrap = styled.nav`
-  background-color: ${({ theme }: { theme: Theme }) => theme.headerBackground};
-  border-radius: 0 0 0 20px;
-  display: flex;
   align-items: center;
+  background-color: ${({ theme }: { theme: Theme }) => theme.headerBackground};
+  display: flex;
   justify-content: space-between;
+  overflow: hidden;
   padding: 16px;
   width: 100%;
 `
